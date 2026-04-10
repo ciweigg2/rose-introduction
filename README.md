@@ -12,6 +12,24 @@
 
 ---
 
+`docker部署`
+
+```yaml
+services:
+  rose-emby-bridge:
+    image: ciwei123321/rose:latest
+    container_name: rose
+    environment:
+      ROSE_ADMIN_PASSWORD: rose123
+      TZ: Asia/Shanghai
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/app/data
+      - ./strm:/app/strm
+    restart: always
+```
+
 [官网](https://rosehub.ccwu.cc/)
 
 [Telegram](https://t.me/bloodyrosehub)
