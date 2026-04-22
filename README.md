@@ -15,6 +15,7 @@
 `docker部署`
 
 ```yaml
+version: '3.9'
 services:
   rose-emby-bridge:
     image: ciwei123321/rose:latest
@@ -22,8 +23,10 @@ services:
     environment:
       ROSE_ADMIN_PASSWORD: rose123
       TZ: Asia/Shanghai
+      EMBY_UPSTREAM: http://192.168.2.107:8096/emby
     ports:
       - "8787:8787"
+      - "8788:8788"
     volumes:
       - ./data:/app/data
       - ./strm:/app/strm
