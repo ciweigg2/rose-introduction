@@ -20,6 +20,7 @@ services:
   rose-emby-bridge:
     image: ciwei123321/rose:latest
     container_name: rose
+    uts: host
     environment:
       ROSE_ADMIN_PASSWORD: rose123
       TZ: Asia/Shanghai
