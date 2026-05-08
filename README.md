@@ -25,6 +25,10 @@ services:
       ROSE_ADMIN_PASSWORD: rose123
       TZ: Asia/Shanghai
       EMBY_UPSTREAM: http://192.168.2.107:8096/emby
+      # 代理配置
+      #HTTP_PROXY: http://ip:port
+      #HTTPS_PROXY: http://ip:port
+      #NO_PROXY: 127.0.0.1,localhost,::1,172.17.0.1
     ports:
       - "8787:8787"
       - "8788:8788"
